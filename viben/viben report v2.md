@@ -31,7 +31,7 @@ Viben의 채점 시스템은 주관적 해석을 배제하고 객관적 지표�
 공정성을 보장하기 위해 다음과 같은 4단계 파이프라인을 거쳐 최종 점수 확정
 
 1. **Code Digest:** 프로젝트 ZIP 파일을 분석하여 파일 구조, 주요 코드, 프레임워크 시그널을 요약
-2. **Gemini Analysis:** System Prompt와 스코어링 기준을 탑재한 Gemini 모델이 증거를 기반으로 JSON 형태의 채점표를 생성
+2. **Analysis:** System Prompt와 스코어링 기준을 탑재한 데스크톱 채점기(Viben Judge)가 증거를 기반으로 JSON 형태의 채점표를 생성
 3. **Validation & Calculation:** 파이썬 스크립트가 JSON을 파싱하여 수학적 정합성을 검증하고, 가중치 공식을 적용하여 점수를 계산
 4. **Iteration:** 편차를 줄이기 위해 Temperature 0.2 환경에서 N회 채점을 수행하고, 극단값(Outlier)을 제거한 후 최종 평균을 산출
 
