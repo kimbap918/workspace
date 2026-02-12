@@ -370,7 +370,7 @@ $$C_w = 0.40 \text{Identity} + 0.35 \text{Consistency} + 0.25 \text{Assets}$$
     
     - 키워드 예: introduce, showcase, landing, portfolio, just introduce
         
-    - 섹션 구성/내비/탭·필터/제품 상세(모달·섹션) 중심 소개 경험을 기대함.
+    - 섹션 구성/내비/탭·필터/제품 상세(모달·섹션) 중심 소개 경험을 기대함. (1depth)
         
 <br>
 
@@ -378,7 +378,7 @@ $$C_w = 0.40 \text{Identity} + 0.35 \text{Consistency} + 0.25 \text{Assets}$$
     
     - 키워드 예: dashboard, admin, CRUD, save/edit/delete, database, API, search+filter+sort
         
-    - 데이터 생성·수정·삭제, 폼 검증, 상태관리, 에러 처리를 기대함.
+    - 데이터 생성·수정·삭제, 폼 검증, 상태관리, 에러 처리를 기대함. + 1depth 이상
         
 <br>
 
@@ -386,7 +386,7 @@ $$C_w = 0.40 \text{Identity} + 0.35 \text{Consistency} + 0.25 \text{Assets}$$
     
     - 키워드 예: auth/login, role/permission, payment/checkout, booking, subscription, onboarding
         
-    - 인증·권한·결제/완료 상태 포함 다단계 워크플로우를 기대함.
+    - 인증·권한·결제/완료 상태 포함 다단계 워크플로우를 기대함. + 3depth 이상
         
 
 <br>
@@ -492,8 +492,7 @@ Test Date: 2026-02-11
 
 
 ### 사용 프롬프트(1) - APPLE 홈페이지 카피
-- 난이도 L1
-- 랜딩 페이지, 
+- PDL L1으로 채점되어 Landing Page only(1 Depth) 기준 채점
 
 ```
 I want to build a website for apple just introduce about apple products.
@@ -517,8 +516,7 @@ I want to build a website for apple just introduce about apple products.
 
 
 ### 사용 프롬프트(2) - 럭셔리 쇼핑몰 
-- 난이도 L3
-- 
+- PDL L3로 채점되어 인증·권한·결제/완료 상태 등의 다단계 워크플로우 구현 요구(3 Depth 이상)
 
 ```
 Create a luxury women's fashion e-commerce platform with complete shopping experience: 1. Product Catalog: Display luxury items with high-quality images, price, brand 2. Product Detail: Size selector, color variants, zoom images, add to cart 3. Shopping Cart: View cart, update quantities, remove items, see total 4. Checkout Flow: Shipping info, payment method selection, order summary 5. User Account: Order history, saved addresses, wishlist 6. Elegant UI: Minimalist luxury aesthetic, smooth transitions, premium feel Must include: Product grid, filters, cart drawer, checkout steps, confirmation page.
