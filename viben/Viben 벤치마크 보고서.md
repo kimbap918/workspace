@@ -308,7 +308,7 @@ Viben의 채점 시스템은 주관적 해석을 배제하고 객관적 지표�
 - 의미: 모델의 절대적인 성능 총점을 나타냄. (1~100점 만점 기준)  
 - 계산식: <br>
 
-$$\textbf{Raw Score} = (A_w \times 12) + (B_w \times 6) + (C_w \times 2)$$
+$$\textbf{Total Score} = (A_w \times 12) + (B_w \times 6) + (C_w \times 2)$$
 
 - $A_w$: 핵심 성능(Core Performance, 60%) 가중평균(0~5)
     
