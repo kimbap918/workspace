@@ -1,3 +1,14 @@
+# Vibench 
+- 도입: Vibench 소개
+- 무엇을 평가하는가: 난이도 및 채점 항목
+- 어떻게 계산하는가: 채점 방식
+- 채점기
+- Vibench 사이트
+
+
+<br>
+<br>
+
 ## 도입: Vibench 소개 
 
 - **기존 바이브 코딩 비교:** **체감, 인상** 중심
@@ -101,7 +112,10 @@ $$\textbf{Total Score}=(A_w\times12)+(B_w\times6)+(C_w\times2)$$
 
 <br>
 
-## Appendix: 항목별 상세 평가 기준
+<details>
+<summary><h2> Appendix: 항목별 상세 평가 기준</h2></summary>
+
+<br>
 
 ### Ⅰ. A. 핵심 성능 표준(Core Performance - Weight 0.60)
 
@@ -117,11 +131,10 @@ $$\textbf{Total Score}=(A_w\times12)+(B_w\times6)+(C_w\times2)$$
 #### i. Logic (기능 완결성) 체크리스트
 
 - **L1:** UI 인터랙션(필터, 탭)과 빈 상태(Empty State) 구현 여부를 확인함.
-    
 - **L2:** L1 + CRUD 기능 작동 여부와 폼 에러 처리 여부를 확인함.
-    
 - **L3:** L2 + 인증, 결제 프로세스 완결성(과정, 실제 결제가 되는것을 판단하지 않음)과 엣지 케이스(예외 상황) 방어 로직 존재 여부를 확인함.
-    
+
+<br>
 
 ### Ⅱ. B. 개발 및 운영 효율(Developer Experience - Weight 0.30)
 
@@ -135,11 +148,8 @@ $$\textbf{Total Score}=(A_w\times12)+(B_w\times6)+(C_w\times2)$$
 #### i. Code Quality (코드 품질) 기대치
 
 - **L1:** 컴포넌트 분리와 스타일 시스템 준수 여부를 확인함. 백엔드 로직 부재는 감점 요인이 아님.
-    
 - **L2:** L1 + 데이터 레이어 분리(Hooks/API) 등을 확인함.
-    
 - **L3:** L2 + 보안 가드(Auth Guard), 민감 정보 처리, 예외처리 설계 여부를 확인함.
-    
 
 #### ii. Gen Efficiency (생성 효율) 평가 기준 및 Depth 연동 보정 로직
 
@@ -153,17 +163,15 @@ $$\textbf{Total Score}=(A_w\times12)+(B_w\times6)+(C_w\times2)$$
 |**L2**|7분 미만|7~12분|12~20분|35분 초과|
 |**L3**|12분 미만|12~20분|20~35분|60분 초과|
 
-
-
 **[Depth 연동 보정 계산식]**
 LLM 연산 환각을 방지하기 위해 프롬프트 내부 계산을 배제하고, 백엔드 검증 파이프라인에서 다음 공식을 연산하여 최종 점수에 반영함.
 
 $$\text{EffectiveGenEff} = \min\left(5.0, \; \text{RawGenEff} \times \frac{\text{E2EDepth}}{\text{ExpectedDepth}}\right)$$
 
 - **ExpectedDepth 상수:** L1 = 1.0 / L2 = 2.0 / L3 = 4.0
-    
 - **평가 로직:** 심층 워크플로우를 모두 구현한 모델은 소요 시간이 길어 `RawGenEff`가 다소 낮아도 보정 및 점수가 보호되며, 얕은 화면만 빠르게 생성한 모델은 점수가 대폭 삭감됨.
-    
+
+<br>
 
 ### Ⅲ. C. 브랜드 준비도(Brand Readiness - Weight 0.10)
 
@@ -173,7 +181,12 @@ $$\text{EffectiveGenEff} = \min\left(5.0, \; \text{RawGenEff} \times \frac{\text
 |**UI 통일성 (UIConsistency)**|0.35|공통 컴포넌트(Button, Card) 재사용과 여백/타이포 계층의 일관성을 평가함.|
 |**에셋 통일성 (AssetCohesion)**|0.25|이미지/아이콘 스타일의 조화를 평가함. 깨진 이미지 없이 브랜드 분위기에 맞는 에셋 사용 여부를 확인함.|
 
+<br>
 
+### Vibench 사이트
+https://vibench.vibe-x.app
+
+</details>
 
 
 <br>
