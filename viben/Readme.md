@@ -176,21 +176,6 @@ $$\text{EffectiveGenEff} = \min\left(5.0, \; \text{RawGenEff} \times \frac{\text
 
 
 
-
-
-
-
-
-
-
-### Vibench 사이트
-https://vibench.vibe-x.app
-
-
-
-
-
-
 <br>
 
 
