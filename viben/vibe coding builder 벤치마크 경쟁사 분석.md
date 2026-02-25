@@ -45,7 +45,8 @@
 <br>
 
 ### UI-Bench
-![Image](https://github.com/user-attachments/assets/18291eac-9485-4e4d-a529-61d0e6defc3f)**정체성 및 포지션**: “AI text-to-app(웹사이트/웹앱) 도구”가 만드는 결과물의 **시각적 완성도**를 전문가 블라인드 선호로 평가합니다. 시각적 품질은 정답지 기반 자동점수화가 어렵다는 전제에서, **전문가 pairwise + TrueSkill 기반 랭킹**을 택하고 있습니다.
+![Image](https://github.com/user-attachments/assets/18291eac-9485-4e4d-a529-61d0e6defc3f)
+**정체성 및 포지션**: “AI text-to-app(웹사이트/웹앱) 도구”가 만드는 결과물의 **시각적 완성도**를 전문가 블라인드 선호로 평가합니다. 시각적 품질은 정답지 기반 자동점수화가 어렵다는 전제에서, **전문가 pairwise + TrueSkill 기반 랭킹**을 택하고 있습니다.
 
 | 항목          | 내용                                                                            |
 | ----------- | ----------------------------------------------------------------------------- |
@@ -65,7 +66,8 @@
 
 ### DesignArena
 <img width="1735" height="897" alt="Image" src="https://github.com/user-attachments/assets/efd0089b-9c15-479e-af0d-8721090393f2" />
-**정체성 및 포지션**: “taste(취향)”를 표방하는 커뮤니티 기반 pairwise 토너먼트로, 코드 카테고리(웹사이트/UI 컴포넌트/데이터 시각화 등)와 함께 **Builder 카테고리에서 ‘배포된 웹앱을 내는 빌더’**를 비교합니다.
+
+**정체성 및 포지션**: “taste(취향)”를 표방하는 커뮤니티 기반 pairwise 토너먼트로, 코드 카테고리(웹사이트/UI 컴포넌트/데이터 시각화 등)와 함께 **Builder 카테고리에서 ‘배포된 웹앱을 내는 빌더’** 를 비교합니다.
 
   
 | 항목                  | 내용                                                                                                                                              |
