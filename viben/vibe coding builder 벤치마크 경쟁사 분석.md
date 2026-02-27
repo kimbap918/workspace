@@ -1,4 +1,4 @@
-# vibe coding builder 벤치마크 경쟁사 분석
+
 
 본 보고서는 Vibench(`https://vibench.vibe-x.app/`)과 유사하게 **Lovable·Replit·Manus·v0·Bolt 등 “E2E vibe-coding builder(프롬프트→배포된 앱)” 자체를 벤치마킹**하는 공개 플랫폼이 존재하는지 조사 및 분석한 보고서입니다.
 
@@ -8,12 +8,12 @@
  
 ### 직접 경쟁은 존재한다
 
- 특히 App-Bench 및 UI-Bench, 그리고 DesignArena는 **‘빌더/에이전트’를 모델이 아니라 “완성된 결과물” 중심으로 비교·랭킹**한다는 점에서 Vibench와 같은 문제를 정면으로 다루고 있습니다.
+ 특히 App-Bench 및 UI-Bench, 그리고 DesignArena는 **‘빌더/에이전트’를 모델이 아니라 “완성된 결과물” 중심으로 비교·랭킹**한다는 점에서 Viben과 같은 문제를 정면으로 다루고 있습니다.
 
 <br>
 
 ### Vibench의 차별점
- (a) 기능성(통과/실패) 중심(App-Bench), (b) 시각적 선호(UI-Bench), (c) 대규모 커뮤니티 선호·토너먼트 기반(DesignArena)으로 각각 강점이 있으나, **로컬라이제이션·멀티모달 자산·브랜드 준비도·프롬프트와 재현성 및 커뮤니티**를 한 플랫폼에 묶어 제공하는 공개 벤치마크는 아직 희소합니다.
+ (a) 기능성(통과/실패) 중심(App-Bench), (b) 시각적 선호(UI-Bench), (c) 대규모 커뮤니티 선호·토너먼트 기반(DesignArena)으로 각각 강점이 있으나, **로컬라이제이션·멀티모달 자산·브랜드 준비도·프롬프트와 재현성**을 한 플랫폼에 묶어 제공하는 공개 벤치마크는 아직 희소합니다.
 
 
 <br>
@@ -22,7 +22,7 @@
 
 
 ### App-Bench
-![Image](https://github.com/user-attachments/assets/7108de08-3416-44b3-be68-c726726d8b25)
+![]([https://i.imgur.com/nKlwg8M.jpeg](https://i.imgur.com/nKlwg8M.jpeg))
 **정체성 및 포지션**: 프롬프트 하나로 생성된 “실제 웹앱”을 기능 루브릭으로 채점해, 빌더/코딩 에이전트를 함께 비교하는 공개 벤치마크. “One-shot generation, zero human edits” 라는 표어를 내걸고 있습니다.
 
 
@@ -45,7 +45,7 @@
 <br>
 
 ### UI-Bench
-![Image](https://github.com/user-attachments/assets/18291eac-9485-4e4d-a529-61d0e6defc3f)
+![]([https://i.imgur.com/bKjcrzm.jpeg](https://i.imgur.com/bKjcrzm.jpeg))
 **정체성 및 포지션**: “AI text-to-app(웹사이트/웹앱) 도구”가 만드는 결과물의 **시각적 완성도**를 전문가 블라인드 선호로 평가합니다. 시각적 품질은 정답지 기반 자동점수화가 어렵다는 전제에서, **전문가 pairwise + TrueSkill 기반 랭킹**을 택하고 있습니다.
 
 | 항목          | 내용                                                                            |
@@ -65,9 +65,9 @@
 <br>
 
 ### DesignArena
-<img width="1735" height="897" alt="Image" src="https://github.com/user-attachments/assets/efd0089b-9c15-479e-af0d-8721090393f2" />
-
-**정체성 및 포지션**: “taste(취향)”를 표방하는 커뮤니티 기반 pairwise 토너먼트로, 코드 카테고리(웹사이트/UI 컴포넌트/데이터 시각화 등)와 함께 **Builder 카테고리에서 ‘배포된 웹앱을 내는 빌더’** 를 비교합니다.
+![]([https://i.imgur.com/1QKzvsv.png](https://i.imgur.com/1QKzvsv.png))
+  
+**정체성 및 포지션**: “taste(취향)”를 표방하는 커뮤니티 기반 pairwise 토너먼트로, 코드 카테고리(웹사이트/UI 컴포넌트/데이터 시각화 등)와 함께 **Builder 카테고리에서 ‘배포된 웹앱을 내는 빌더’**를 비교합니다.
 
   
 | 항목                  | 내용                                                                                                                                              |
@@ -98,9 +98,9 @@
 <br>
 
 
-### Vibench 대비 비교 테이블
+### Viben 대비 비교 테이블
 
-| 비교 축      | Vibench                                | App-Bench                       | UI-Bench                      | DesignArena                         |
+| 비교 축      | Viben                                | App-Bench                       | UI-Bench                      | DesignArena                         |
 | --------- | ------------------------------------ | ------------------------------- | ----------------------------- | ----------------------------------- |
 | 평가 대상     | 빌더 결과물(E2E)                          | 빌더 + CLI/IDE 에이전트(E2E)          | 웹사이트/웹앱 “시각적 결과물”             | 모델/코드 카테고리 + Builder(배포 URL)        |
 | 태스크 구성    | PDL(L1/L2/L3) 기반 시나리오                | 6개 풀스택 앱 태스크 + 루브릭              | 30 프롬프트(5 카테고리), 300 사이트      | 카테고리별 프롬프트 랜덤 + 토너먼트                |
@@ -118,8 +118,8 @@
 <br>
 
 ### PS. 벤치마크 상위권 빌더에 대한 의문
-<img width="1236" height="888" alt="image" src="https://github.com/user-attachments/assets/fbf8b2f5-f6bb-4940-9c46-3945a9799259" />
 
+![]([https://i.imgur.com/DCvi6rj.png](https://i.imgur.com/DCvi6rj.png))
 UI-Bench와 App-Bench 리더보드에서 **Orchids**(https://www.orchids.app/)와 같은 신생 빌더가 Claude Code를 이기며 동시에 최상위권에 위치하고 있습니다. 특히 두 벤치마크가 동일 계열 운영 주체(AfterQuery)와 연관되어 있다는 점에서, 다음과 같은 의문이 제기됩니다.
 
 - 특정 벤치마크 태스크에 대한 과적합 가능성
