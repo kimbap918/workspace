@@ -1,3 +1,4 @@
+# 벤치마크 경쟁사 분석 보고서
 
 
 본 보고서는 Vibench(`https://vibench.vibe-x.app/`)과 유사하게 **Lovable·Replit·Manus·v0·Bolt 등 “E2E vibe-coding builder(프롬프트→배포된 앱)” 자체를 벤치마크**하는 공개 플랫폼이 존재하는지 조사 및 분석한 보고서입니다.
