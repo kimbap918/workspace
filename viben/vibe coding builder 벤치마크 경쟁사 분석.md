@@ -1,6 +1,6 @@
 
 
-본 보고서는 Vibench(`https://vibench.vibe-x.app/`)과 유사하게 **Lovable·Replit·Manus·v0·Bolt 등 “E2E vibe-coding builder(프롬프트→배포된 앱)” 자체를 벤치마킹**하는 공개 플랫폼이 존재하는지 조사 및 분석한 보고서입니다.
+본 보고서는 Vibench(`https://vibench.vibe-x.app/`)과 유사하게 **Lovable·Replit·Manus·v0·Bolt 등 “E2E vibe-coding builder(프롬프트→배포된 앱)” 자체를 벤치마크**하는 공개 플랫폼이 존재하는지 조사 및 분석한 보고서입니다.
 
 <br>
 
@@ -22,7 +22,8 @@
 
 
 ### App-Bench
-![]([https://i.imgur.com/nKlwg8M.jpeg](https://i.imgur.com/nKlwg8M.jpeg))
+![](https://i.imgur.com/nKlwg8M.jpeg)
+
 **정체성 및 포지션**: 프롬프트 하나로 생성된 “실제 웹앱”을 기능 루브릭으로 채점해, 빌더/코딩 에이전트를 함께 비교하는 공개 벤치마크. “One-shot generation, zero human edits” 라는 표어를 내걸고 있습니다.
 
 
@@ -45,7 +46,8 @@
 <br>
 
 ### UI-Bench
-![]([https://i.imgur.com/bKjcrzm.jpeg](https://i.imgur.com/bKjcrzm.jpeg))
+![](https://i.imgur.com/bKjcrzm.jpeg)
+
 **정체성 및 포지션**: “AI text-to-app(웹사이트/웹앱) 도구”가 만드는 결과물의 **시각적 완성도**를 전문가 블라인드 선호로 평가합니다. 시각적 품질은 정답지 기반 자동점수화가 어렵다는 전제에서, **전문가 pairwise + TrueSkill 기반 랭킹**을 택하고 있습니다.
 
 | 항목          | 내용                                                                            |
@@ -65,7 +67,7 @@
 <br>
 
 ### DesignArena
-![]([https://i.imgur.com/1QKzvsv.png](https://i.imgur.com/1QKzvsv.png))
+![](https://i.imgur.com/1QKzvsv.png)
   
 **정체성 및 포지션**: “taste(취향)”를 표방하는 커뮤니티 기반 pairwise 토너먼트로, 코드 카테고리(웹사이트/UI 컴포넌트/데이터 시각화 등)와 함께 **Builder 카테고리에서 ‘배포된 웹앱을 내는 빌더’**를 비교합니다.
 
@@ -75,7 +77,7 @@
 | 제품명                 | DesignArena                                                                                                                                     |
 | URL                 | designarena.ai                                                                                                                                  |
 | 운영 주체               | Arcada Labs                                                                                                                                     |
-| 벤치마킹 범위(어떤 빌더/플랫폼?) | Builder Arena 참여 요건: **텍스트 입력을 받아 “배포된 URL 링크의 웹앱”을 반환**할 것. 빌더 목록에 Lovable, Replit, Bolt.new 등 다수 포함.                                          |
+| 벤치마크 범위(어떤 빌더/플랫폼?) | Builder Arena 참여 요건: **텍스트 입력을 받아 “배포된 URL 링크의 웹앱”을 반환**할 것. 빌더 목록에 Lovable, Replit, Bolt.new 등 다수 포함.                                          |
 | 태스크/데이터셋 지원         | 사전 생성 프롬프트(카테고리 랜덤) 기반. “Builder 카테고리는 one-shot 요청으로 시작하며, 멀티턴/태스크 확장 계획”을 명시.                                                                  |
 | 메트릭/채점 방식           | 커뮤니티 블라인드 pairwise 투표 → Bradley–Terry 기반 레이팅(사이트에서 Elo로 표기).                                                                                    |
 | E2E(풀스택) 검증         | 2026년 2월 공개 글에서 Web App Arena의 “Full-stack evaluation”을 소개: 배포된 앱에 대해 (i) 에이전트 기반 테스트, (ii) 결정적(pass/fail) 검증자, (iii) 인간 선호를 결합하는 하이브리드 검증을 설명. |
