@@ -9,12 +9,12 @@
  
 ### 직접 경쟁은 존재한다
 
- 특히 App-Bench 및 UI-Bench, 그리고 DesignArena는 **‘빌더/에이전트’를 모델이 아니라 “완성된 결과물” 중심으로 비교·랭킹**한다는 점에서 Vibench과 같은 문제를 정면으로 다루고 있습니다.
+특히 App-Bench 및 UI-Bench, 그리고 DesignArena는 **‘빌더/에이전트’를 모델이 아니라 “완성된 결과물” 중심으로 비교·랭킹**한다는 점에서 Vibench과 같은 문제를 정면으로 다루고 있습니다.
 
 <br>
 
 ### Vibench의 차별점
- (a) 기능성(통과/실패) 중심(App-Bench), (b) 시각적 선호(UI-Bench), (c) 대규모 커뮤니티 선호·토너먼트 기반(DesignArena)으로 각각 강점이 있으나, **로컬라이제이션·멀티모달 자산·브랜드 준비도·프롬프트와 재현성**을 한 플랫폼에 묶어 제공하는 공개 벤치마크는 아직 희소합니다.
+(a) 기능성(통과/실패) 중심(App-Bench), (b) 시각적 선호(UI-Bench), (c) 대규모 커뮤니티 선호·토너먼트 기반(DesignArena)으로 각각 강점이 있으나, **로컬라이제이션·멀티모달 자산·브랜드 준비도·프롬프트와 재현성**을 한 플랫폼에 묶어 제공하는 공개 벤치마크는 아직 희소합니다.
 
 
 <br>
@@ -121,8 +121,8 @@
 <br>
 
 ### PS. 벤치마크 상위권 빌더에 대한 의문
+![](https://i.imgur.com/DCvi6rj.png)
 
-![]([https://i.imgur.com/DCvi6rj.png](https://i.imgur.com/DCvi6rj.png))
 UI-Bench와 App-Bench 리더보드에서 **Orchids**(https://www.orchids.app/)와 같은 신생 빌더가 Claude Code를 이기며 동시에 최상위권에 위치하고 있습니다. 특히 두 벤치마크가 동일 계열 운영 주체(AfterQuery)와 연관되어 있다는 점에서, 다음과 같은 의문이 제기됩니다.
 
 - 특정 벤치마크 태스크에 대한 과적합 가능성
