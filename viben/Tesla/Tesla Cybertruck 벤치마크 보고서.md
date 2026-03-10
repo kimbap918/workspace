@@ -47,77 +47,77 @@
 <br>
 
 #### 1. Lovable  
-**Live URL :** [https://cybertruck-dreamscape.lovable.app](https://cybertruck-dreamscape.lovable.app)    
-**소요 시간 :** 2m 7s
-**Avg Total Score :** 85.46
-**토큰/비용 :** Total In=637,221 | Total Out=24,888 | 총 비용=$1.045406
+**Live URL :** [https://cybertruck-dreamscape.lovable.app](https://cybertruck-dreamscape.lovable.app)     <br>
+**소요 시간 :** 2m 7s <br>
+**Avg Total Score :** 85.46  <br>
+**토큰/비용 :** Total In=637,221 | Total Out=24,888 | 총 비용=$1.045406  <br>
 
 <br>
 
 #### 2. V0  
-**Live URL :** [https://v0-tesla-cybertruck-showcase.vercel.app/](https://v0-tesla-cybertruck-showcase.vercel.app/)  
-**소요 시간 :** 3m 1s 
-**Avg Total Score :** 78.05
-**토큰/비용 :** Total In=107,971 | Total Out=25,303 | 총 비용=$0.387994
+**Live URL :** [https://v0-tesla-cybertruck-showcase.vercel.app/](https://v0-tesla-cybertruck-showcase.vercel.app/)    <br>
+**소요 시간 :** 3m 1s   <br>
+**Avg Total Score :** 78.05  <br>
+**토큰/비용 :** Total In=107,971 | Total Out=25,303 | 총 비용=$0.387994  <br>
 
 <br>
 
 #### 3. Replit  
-**Live URL :** [https://cyber-truck-showcase.replit.app](https://cyber-truck-showcase.replit.app)  
-**소요 시간 :** 10m
-**Avg Total Score :** 89.92
-**토큰/비용 :** Total In=842,304 | Total Out=30,220 | 총 비용=$1.355080
+**Live URL :** [https://cyber-truck-showcase.replit.app](https://cyber-truck-showcase.replit.app)    <br>
+**소요 시간 :** 10m  <br>
+**Avg Total Score :** 89.92  <br>
+**토큰/비용 :** Total In=842,304 | Total Out=30,220 | 총 비용=$1.355080  <br>
 
 <br>
 
-### 4. Manus  
-**Live URL :** [https://cybertruck-hozb4wjh.manus.space/](https://cybertruck-hozb4wjh.manus.space/)  
-소요시간 : 19m 15s
-**Avg Total Score :** 83.64
-**토큰/비용 :** Total In=1,088,181 | Total Out=29,204 | 총 비용=$1.652266
+#### 4. Manus  
+**Live URL :** [https://cybertruck-hozb4wjh.manus.space/](https://cybertruck-hozb4wjh.manus.space/)   <br>
+소요시간 : 19m 15s  <br>
+**Avg Total Score :** 83.64  <br>
+**토큰/비용 :** Total In=1,088,181 | Total Out=29,204 | 총 비용=$1.652266  <br>
 
 <br>
 
 #### 5. Bolt
-**Live URL :** https://3d-cybertruck-showca-sgel.bolt.host/
-**소요 시간 :** 30m over
-**Avg Total Score :** 44.68
-**토큰/비용 :** Total In=95,781 | Total Out=22,987 | 총 비용=$0.349596
+**Live URL :** https://3d-cybertruck-showca-sgel.bolt.host/  <br>
+**소요 시간 :** 30m over  <br>
+**Avg Total Score :** 44.68  <br>
+**토큰/비용 :** Total In=95,781 | Total Out=22,987 | 총 비용=$0.349596  <br>
 
 <br>
 
 #### 6. VibeX(sonnet2)
-**Live URL :** [https://cybertruck-showcase-190909.govibex.net](https://cybertruck-showcase-190909.govibex.net) 
-**소요 시간 :** 10m 8s  
-**Avg Total Score :** 90.22
-**토큰/비용 :** Total In=1,026,807 | Total Out=31,233 | 총 비용=$1.595839
+**Live URL :** [https://cybertruck-showcase-190909.govibex.net](https://cybertruck-showcase-190909.govibex.net)   <br>
+**소요 시간 :** 10m 8s   <br>
+**Avg Total Score :** 90.22  <br>
+**토큰/비용 :** Total In=1,026,807 | Total Out=31,233 | 총 비용=$1.595839  <br>
 
 
 <br>
 
 #### 7. VibeX(sonnet1)
-**Live URL :** [https://cybertruck-showcase-183308.govibex.net](https://cybertruck-showcase-183308.govibex.net) 
-**소요 시간 :** 9m7s
-**Avg Total Score :** 89.62
-**토큰/비용 :** Total In=1,061,479 | Total Out=31,077 | 총 비용=$1.637619
+**Live URL :** [https://cybertruck-showcase-183308.govibex.net](https://cybertruck-showcase-183308.govibex.net)   <br>
+**소요 시간 :** 9m7s  <br>
+**Avg Total Score :** 89.62  <br>
+**토큰/비용 :** Total In=1,061,479 | Total Out=31,077 | 총 비용=$1.637619  <br>
 
 
 <br>
 
 #### 8. Vibex(Opus) 
-**Live URL :** https://cybertruck-showcase-094734.govibex.net](https://cybertruck-showcase-094734.govibex.net
-**소요 시간 :** 10m22s
-**Avg Total Score :** 86.52
-**토큰/비용 :** Total In=907,301 | Total Out=29,014 | 총 비용=$1.424266
+**Live URL :** https://cybertruck-showcase-094734.govibex.net](https://cybertruck-showcase-094734.govibex.net  <br>
+**소요 시간 :** 10m22s  <br>
+**Avg Total Score :** 86.52  <br>
+**토큰/비용 :** Total In=907,301 | Total Out=29,014 | 총 비용=$1.424266  <br>
 
 
 <br>
 
 
 ## 3. 토큰/비용 결과
-**전체 Total In (입력 토큰):** 5,767,045
-**전체 Total Out (출력 토큰):** 223,926
-**전체 총 비용:** $9.448066
+**전체 Total In (입력 토큰):** 5,767,045  <br>
+**전체 Total Out (출력 토큰):** 223,926  <br>
+**전체 총 비용:** $9.448066  <br> 
 - 2026년 3월 10일 기준, 1달러 = 약 1,468.48원을 적용했을 때, 한화로 **약 13,874원 발생**
 
 
