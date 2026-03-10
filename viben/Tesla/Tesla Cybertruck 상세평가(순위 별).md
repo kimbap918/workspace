@@ -57,6 +57,14 @@ Top Gaps:
 
 - shadcn/ui 컴포넌트가 대량으로 포함되어 있어, 실제 사용되지 않는 코드를 정리(tree-shaking)하는 과정이 필요할 수 있음
 
+Highest Leverage Fix:
+
+- Jest와 React Testing Library를 도입하여 주요 컴포넌트(예: SpecCard)에 대한 기본 렌더링 테스트 작성
+
+- 모바일 메뉴 토글과 같은 핵심 사용자 인터랙션에 대한 테스트 케이스 추가
+
+- 주요 페이지(Home)에 대한 스냅샷 테스트를 추가하여 UI 변경 사항을 추적하고 의도치 않은 회귀를 방지
+
 
 <br>
 <br>
@@ -91,14 +99,6 @@ Highest Leverage Fix:
 
 - 반복적으로 사용되는 색상(e.g., 'cyan-400')과 폰트 스타일을 tailwind.config.js의 theme 확장 기능으로 등록하여 디자인 시스템을 코드 레벨에서 관리하는 것이 좋습니다.
 
-
-Highest Leverage Fix:
-
-- Jest와 React Testing Library를 도입하여 주요 컴포넌트(예: SpecCard)에 대한 기본 렌더링 테스트 작성
-
-- 모바일 메뉴 토글과 같은 핵심 사용자 인터랙션에 대한 테스트 케이스 추가
-
-- 주요 페이지(Home)에 대한 스냅샷 테스트를 추가하여 UI 변경 사항을 추적하고 의도치 않은 회귀를 방지
 
 
 <br>
