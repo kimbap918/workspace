@@ -7,26 +7,27 @@
 
 ## 1. 개요
 
-- **목적**: VibeX 공식 고객지원 이메일(`support@vibe-x.app`)로 인입되는 고객 문의를 AI가 자동으로 분석하여, 사내 지식베이스(FAQ, 매뉴얼, 약관 등) 기반의 정확한 답변을 24시간 즉각적으로 회신하는 자동화 파이프라인 구축.
-- **사용 기술**: n8n (Self-hosted), VibeX RAG Chat API, Gmail IMAP/SMTP, Prompt Engineering.
-- **운영 환경**: 자체 서버 (`218.145.67.52:5678`) 백그라운드 상시 구동.
+- **목적**: VibeX 공식 고객지원 이메일(`support@vibe-x.app`)로 인입되는 고객 문의를 AI가 자동으로 분석하여, 사내 지식베이스(FAQ, 매뉴얼, 약관 등) 기반의 정확한 답변을 24시간 즉각적으로 회신하는 자동화 파이프라인 구축
+- **사용 기술**: n8n (Self-hosted), VibeX RAG Document Search API, **Google Gemini (n8n 내장 LLM 노드)**, Gmail IMAP/SMTP, Prompt Engineering
+- **운영 환경**: 자체 서버 (`218.145.67.52:5678`) 백그라운드 상시 구동
     
 
 <br>
 
 ## 2. 시스템 아키텍처 및 워크플로우
-<img width="1087" height="320" alt="Image" src="https://github.com/user-attachments/assets/909e6c81-d278-4a66-968d-329d403a80b9" />
-
-본 시스템은 n8n을 활용하여 총 4단계의 노드(Node) 파이프라인으로 구성되었습니다.
+<img width="1221" height="414" alt="Image" src="https://github.com/user-attachments/assets/c146125c-91b0-4614-8419-eeea40d64956" />
+본 시스템은 n8n을 활용하여 총 5단계의 노드(Node) 파이프라인으로 구성되었습니다.
 
 
 1. **Email Trigger (IMAP)**: `support@vibe-x.app` 계정의 수신 메일을 실시간으로 감지하여 데이터를 추출합니다.
-
+    
 2. **Filter**: 마케팅 메일, 시스템 자동 발송(noreply), 스팸 등을 필터링하여 실제 고객의 문의 메일만 다음 단계로 통과시킵니다.
     
-3. **VibeX RAG API (HTTP Request)**: VibeX의 자체 Chat API(`POST /api/v1/chat`)를 호출합니다. API Key와 JWT 이중 인증을 통과한 후, 고객의 질문을 RAG 엔진에 전달하여 벡터 DB에 저장된 문서를 기반으로 답변을 추론합니다.
+3. **VibeX RAG API1 (HTTP Request)**: VibeX의 자체 문서 검색 API(`POST /api/v1/documents/search`)를 호출합니다. 고객의 질문을 전달하여 벡터 DB에 저장된 관련 사내 지식 문서(텍스트 조각)만을 빠르고 정확하게 추출합니다.
     
-4. **Send an Email (SMTP)**: AI가 생성한 초안을 고객에게 발송합니다. Gmail의 앱 비밀번호와 `smtp.gmail.com`을 활용하여 발송과 동시에 `support@vibe-x.app`의 '보낸메일함'에 기록이 자동 동기화되도록 구성했습니다.
+4. **Basic LLM Chain (Google Gemini)**: 앞서 검색된 지식 문서 내용과 고객의 원본 메일을 조합하여 프롬프트를 구성한 뒤, n8n에 연결된 Gemini LLM 모델을 통해 최종 이메일 답변 텍스트를 생성합니다.
+    
+5. **Send an Email (SMTP)**: AI가 생성한 최종 답변을 고객에게 발송합니다. Gmail의 앱 비밀번호와 `smtp.gmail.com`을 활용하여 발송과 동시에 `support@vibe-x.app`의 '보낸메일함'에 기록이 자동 동기화되도록 구성했습니다.
     
 
 <br>
@@ -35,21 +36,35 @@
 - CS 직원이 응대하는 것과 같은 톤앤매너를 유지하기 위해 프롬프트 엔지니어링이 적용되었습니다.
 
 
+### VibeX 문서 검색 API Payload
+
 ``` JSON
 {{
   {
-    "message": "당신은 VibeX의 전문적인 이메일 고객 지원 AI입니다. 아래 [고객 문의 내용]의 언어를 분석하고, 반드시 문의와 100% 동일한 언어로 번역하여 답변하세요.\n\n"
-             + "[고객 문의 내용]\n"
-             + "메일 제목: " + $('Email Trigger (IMAP)').item.json.subject + "\n"
-             + "메일 본문: " + $('Email Trigger (IMAP)').item.json.textPlain + "\n\n"
-    "provider": "openai",
-    "ragEnabled": true,
-    "ragMaxResults": 5,
-    "ragMinScore": 0.7
+    "query": $('Email Trigger (IMAP)').item.json.subject + " \n " + $('Email Trigger (IMAP)').item.json.textPlain,
+    "maxResults": 5,
+    "minScore": 0.4
   }
 }}
 ```
 
+
+<br>
+
+### LLM Prompt Engineering
+
+Plaintext
+
+```
+당신은 VibeX의 전문적인 이메일 고객 지원 AI입니다. 아래 [고객 문의 내용]의 언어를 분석하고, 처음부터 끝까지 **반드시 문의와 100% 동일한 언어로 번역하여** 답변하세요.
+
+[고객 문의 내용]
+메일 제목: {{ $('Email Trigger (IMAP)').item.json.subject }}
+메일 본문: {{ $('Email Trigger (IMAP)').item.json.textPlain }}
+
+[검색된 사내 지식 문서]
+{{ $json.data && $json.data.contents && $json.data.contents.length > 0 ? $json.data.contents.map(c => c.text).join('\n') : '검색된 지식 문서 없음' }}
+```
 
 <br>
 
